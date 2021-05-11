@@ -23,4 +23,6 @@ class Point:
             self.polar = atan(sqrt(self.x**2+self.y**2)/self.z)
             self.azimuth = atan(self.y/self.x)
         elif flag == "spherical":
-            pass
+            self.x = self.radius * sin(self.polar) * cos(self.azimuth)
+            self.y = self.radius * sin(self.polar) * sin(self.azimuth)
+            self.z = self.radius * cos(self.polar)
